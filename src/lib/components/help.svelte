@@ -27,16 +27,16 @@
 <style>
     #hlp-blc{
         position: absolute;
-        bottom: 10vh;
-        right: -12vh;
+        bottom: 14vh;
+        right: 8vh;
         /* Note: backdrop-filter has minimal browser support */
-        z-index: 5;
+        z-index: 0;
     }
     #hlp-btn{
         border-radius: 100%;
         position: absolute;
-        width: 44px;
-        height: 44px;
+        width: 3.5%;
+        height: 4%;
         bottom: 10vh;
         right: 10vh;
         background: rgba(255, 255, 255, 0.06);

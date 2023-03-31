@@ -8,7 +8,13 @@
      */
      export let legend;
     export let userSelected = options[0].value;
+    
 </script>
+<svelte:head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+</svelte:head>
 
 <div id="tl-blc">
     <p id="tl-blc-title">{legend}</p>
@@ -24,8 +30,8 @@
     .tl-blc-radio-sel{
         font-family: 'Space Mono';
         font-style: normal;
-        font-weight: 400;
-        font-size: 24px;
+        font-weight: 300;
+        font-size: 10px;
         line-height: 100%;
         display: flex;
         align-items: center;
@@ -41,8 +47,8 @@
     .tl-blc-radio{
         font-family: 'Space Mono';
         font-style: normal;
-        font-weight: 400;
-        font-size: 24px;
+        font-weight: 300;
+        font-size: 10px;
         line-height: 100%;
         display: flex;
         align-items: center;
@@ -57,8 +63,8 @@
     #tl-blc-title{
         font-family: 'Space Mono';
         font-style: normal;
-        font-weight: 400;
-        font-size: 24px;
+        font-weight: 300;
+        font-size: 10px;
         line-height: 100%;
         display: flex;
         align-items: center;
@@ -71,12 +77,13 @@
     }
     #tl-blc{
         display: flex;
-        flex-direction: row;
+        flex-flow: row wrap;
+        /* flex-direction: row; */
         align-items: flex-start;
         padding: 10px;
         gap: 8px;
-        width: 80vw;
-        height: 5vh;
+        width: 80%;
+        /* height: 5vh; */
         background: rgba(255, 255, 255, 0.04);
         mix-blend-mode: normal;
         box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.33);
@@ -85,6 +92,7 @@
         flex: none;
         order: 1;
         flex-grow: 0;
+        /* flex-wrap: wrap; */
         animation-name: blc;
         animation-duration: 500ms;
     }
@@ -139,4 +147,50 @@
         }
         100% {margin-top: 10px;}
     }
+    
+    @media only screen and (min-width:321px) and (max-width: 768px) {
+        #tl-blc-title{
+            font-size: 15px;
+            line-height: 100%;
+        }
+        .tl-blc-radio-sel{
+            font-size: 15px;
+            font-weight: 400;
+        }
+        .tl-blc-radio{
+            font-size: 15px;
+            font-weight: 400;
+        }
+    }
+
+    @media only screen and (min-width:769px) and (max-width: 1200px) {
+        #tl-blc-title{
+            font-size: 20px;
+            line-height: 100%;
+        }
+        .tl-blc-radio-sel{
+            font-size: 20px;
+            font-weight: 400;
+        }
+        .tl-blc-radio{
+            font-size: 20px;
+            font-weight: 400;
+        }
+    }
+
+    @media only screen and (min-width:1201px) {
+        #tl-blc-title{
+            font-size: 24px;
+            line-height: 100%;
+        }
+        .tl-blc-radio-sel{
+            font-size: 24px;
+            font-weight: 400;
+        }
+        .tl-blc-radio{
+            font-size: 24px;
+            font-weight: 400;
+        }
+    }
+
 </style>

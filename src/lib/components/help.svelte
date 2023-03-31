@@ -35,8 +35,8 @@
     #hlp-btn{
         border-radius: 100%;
         position: absolute;
-        width: 3.5%;
-        height: 4%;
+        width: 44px;
+        height: 44px;
         bottom: 10vh;
         right: 10vh;
         background: rgba(255, 255, 255, 0.06);
